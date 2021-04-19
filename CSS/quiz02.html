@@ -23,6 +23,12 @@
         button:hover:last-of-type {
             background-color: darkgray;
         }
+        input[type="checkbox"]:checked + span {
+            color: red;
+        }
+        input[type="checkbox"]:hover {
+            cursor: pointer;
+        }
         
     
     </style>
@@ -45,7 +51,7 @@
     
     <fieldset>
         <legend>취미를 선택하세요</legend>
-        <input type="checkbox" name="hobbies" value="movie">
+        <input type="checkbox" name="hobbies" value="movie" id="movie">
         <span>영화</span>
         <input type="checkbox" name="hobbies" value="travel">
         <span>여행</span>

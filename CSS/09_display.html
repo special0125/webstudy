@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>display</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    
+    <style>
+    
+        /* display : 블록레벨 <-> 인라인, 표시유무, 플렉싱 */
+        /* 화면에서 이미지와 이미지구역이 모두 사라진다. */
+        img:nth-of-type(2) {
+            display: none;
+        }
+        fieldset {
+            width: 200px;
+        }
+        .blind {
+            display: none;
+        }
+        input[type="radio"]:checked + span {
+            color: red;
+        }
+        a.block-style {
+            display: block;  /* inline -> block */
+            width: 200px;
+            height: 50px;
+            background:  limegreen;
+            color: white;
+            text-align: center;
+            line-height: 50px; /* height == line-height 하면 세로 가운데 정렬 효과가 나타단다. (텍스트가 한줄일때만 가능)*/
+            text-decoration: none;  /* 밑줄 없애기 */
+        }
+        
+        a.inline-block-style {
+            display: inline-block;  /* inline 배치되지만 block요소를 사용할 수 있다.*/
+            margin-top: 10px;
+            width: 200px;
+            height: 50px;
+            border-radius: 5px;
+            background-color: lightskyblue;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            
+        }
+    </style>
+    
+   
+</head>
+<body>
+    <img alt="강아지" src="images/dog.jpg">
+    <img alt="독수리" src="images/eagle.jpg">
+    <img alt="고슴도치" src="images/hedgehog.jpg">
+    
+    <br><br>
+    
+    <fieldset>
+        <legend class="blind">성별</legend>
+        <label><input type="radio" name="gender" value=""><span>선택</span></label>
+        <label><input type="radio" name="gender" value="male"><span>남성</span></label>
+        <label><input type="radio" name="gender" value="female"><span>여성</span></label>
+    </fieldset>
+    
+    <!-- block -> inline -->
+    <div>여기는 <div style="display: inline">inline</div> 처리합니다.</div>
+    
+    <!-- inlinde -> block -->
+    <a class="block-style" href="http://www.naver.com">네이버</a>
+    
+    <!-- inline-block -->
+    <a class="inline-block-style" href="http://www.twitter.com"><i class="fab fa-twitter"></i></a>
+    <a class="inline-block-style" href="http://www.facebook.com"><i class="fab fa-facebook-square"></i></a>
+        
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
