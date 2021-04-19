@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>quiz07</title>
+    <style>
+        .u {
+            width: 500px;
+            
+            display: flex;
+            justify-content: space-between;
+            
+            /* ul의 기본 속성 없애기*/
+            list-style-type: none;
+            padding-left: 0;
+            
+            /* 위아래 테두리 */
+            border-top: 2px solid gray;
+            border-bottom: 2px solid gray;
+        }
+        .u > li {
+            height: 50px;
+            line-height: 50px;
+        }
+        .u > li > a {
+            text-decoration: none;
+            color: limegreen;
+        }
+        
+        .menu-bar {
+            width: 100%;  /* body 기준 100% */
+            
+            display: flex;
+            justify-content: center;        
+            list-style-type: none;
+            padding: 0px;
+            
+            border-top: 1px solid gray;
+            border-bottom: 2px solid gray;
+        }
+        .menu-bar > li {
+            margin-right: 40px;
+        }
+        .menu-bar > li > a {
+            display: block;
+            width: 100%;
+            padding: auto 10px;
+            text-align: center;
+            color: black;
+            text-decoration: none;
+            font-weight: 900;
+        }
+        .menu-bar >li > a:hover {
+            border-bottom: 3px solid red;
+            color: red;
+        }
+        .menu-bar > li > a:active {
+            border-bottom: 3px solid crimson;
+            color: crimson;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <ul class="u">
+        <li><a href="https://mail.naver.com/">메일</a></li>
+        <li><a href="https://section.cafe.naver.com/">카페</a></li>
+        <li><a href="https://section.blog.naver.com/">블로그</a></li>
+        <li><a href="https://kin.naver.com/">지식iN</a></li>
+        <li><a href="https://shopping.naver.com/">쇼핑</a></li>
+        <li><a href="https://order.pay.naver.com/home">Pay</a></li>
+        <li><a href="https://tv.naver.com/">▲TV</a></li>
+    </ul>
+    <ul class="menu-bar">
+        <li><a href="javascript:void(0)">증권 홈</a></li>
+        <li><a href="javascript:void(0)">시장정보</a></li>
+        <li><a href="javascript:void(0)">이슈</a></li>
+        <li><a href="javascript:void(0)">종목게시판</a></li>
+        <li><a href="javascript:void(0)">뉴스</a></li>
+        <li><a href="javascript:void(0)">MY종목보드</a></li>
+    </ul>
+</body>    
+</html>
