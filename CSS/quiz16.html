@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>quiz16</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    
+    <style>
+        html {
+            font-size: 12px;
+            font-family: Dotum,'돋움',Helvetica,sans-serif;
+        }
+        body {
+            background-color: #f5f6f7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 460px;
+            margin: 0 auto;
+        }
+        header {
+            /* 부모인 .container 기준 */
+            width: 100%;
+            padding: 60px 0 20px;
+        }
+        header > h1 {
+            width: 165px;
+            height: 32px;
+            margin: 0 auto;
+            background-image: url(https://ssl.pstatic.net/static/nid/join/m_logo_naver.png);
+            background-size: 165px auto;
+            background-position: center;
+        }
+        .join_title {
+            margin: 19px 0 8px;
+            font-size: 14px;
+            font-weight: 700px;
+        }
+        .join_title >label:hover , .int:hover {
+            cursor: pointer;
+        }
+        .ps_box {
+            width: 100%;
+            height: 51px;
+            border: 1px solid #dadada;
+            padding: 10px 110px 10px 14px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            
+            /* 자식요소들의 absolute를 위해서*/
+            position: relative;
+        }
+        .ps_box1 {
+            width: 100%;
+            height: 51px;
+            border: 1px solid #dadada;
+            padding: 10px 10px 10px 14px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+        }
+        .int {
+            width: 100%;
+            height: 29px;
+            line-height: 29px;
+            padding-right: 25px;
+            border: none;
+            font-size: 15px;
+            box-sizing: border-box;
+            outline: 0;
+        }
+        .step_url {
+            /* absolute : 원래 자리 무시하고 두고 싶은 곳에 두겠다. */
+            position: absolute;
+            top: 16px;
+            right: 13px;
+            font-size: 15px;
+            line-height: 18px;
+            color: #8e8e8e;
+            cursor: text;
+        }
+        .step_text {
+            position: absolute;
+            top: 50%;
+            right: 13px;
+            width: 24px;
+            height: 24px;
+            margin-top: -12px;
+            background-image: url(https://static.nid.naver.com/images/ui/join/m_icon_pw_step.png);
+            background-repeat: no-repeat;
+            background-size: 125px 75px;
+            cursor: pointer;
+        }
+        .step_text2 {
+            position: absolute;
+            top: 50%;
+            right: 11px;
+            width: 24px;
+            height: 24px;
+            margin-top: -12px;
+            color: #8e8e8e;
+        }
+        .user-info {
+            margin-top: 50px;
+        }
+        .join_birth .ps_box {
+            padding: 11px 14px;
+        }
+        .bir_dd, .bir_mm, .bir_yy{
+            display: table-cell;
+            table-layout: fixed;
+            width: 147px;
+        }
+        .sel {
+            width: 100%;
+            height: 29px;
+            font-size: 15px;
+            line-height: 18px;
+            border: none;
+        }
+        .bir_mm, .bir_dd{
+            padding-left: 10px
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 네이버로고-->
+        <header>
+            <h1></h1>
+        </header>
+        <!-- 본문양식-->
+        <section>
+            <form method="post">
+                <!-- 아이디 label, input -->
+                <div class="join_row">
+                    <!-- 아이디 label-->
+                    <h3 class="join_title">
+                        <label for="id">아이디</label>
+                    </h3>
+                    <!-- 아이디 input상자 -->
+                    <div class="ps_box">
+                        <input type="text" class="int" id="id" name="id">
+                        <span class="step_url">@naver.com</span>
+                    </div>
+                </div>
+                <!-- 비밀번호 label, input -->
+                <div class="join_row">
+                    <!-- 비밀번호 label -->
+                    <h3 class="join_title">
+                        <label for="pwd">비밀번호</label>
+                    </h3>
+                    <!-- 비밀번호 input상자 -->
+                    <div class=ps_box>
+                        <input type="password" class="int" id="pwd" name="pwd">
+                        <span class="step_text"></span>
+                    </div>
+                </div>
+                 <!-- 비밀번호재확인 label, input -->
+                <div class="join_row">
+                    <!-- 비밀번호 label -->
+                    <h3 class="join_title">
+                        <label for="pwd">비밀번호 재확인</label>
+                    </h3>
+                    <!-- 비밀번호 input상자 -->
+                    <div class=ps_box>
+                        <input type="password" class="int" id="pwd" name="pwd">
+                        <span class="step_text2"><i class="far fa-check-square fa-2x"></i></span>
+                    </div>
+                </div>
+                <!-- 이름 label, input -->
+                <div class="user-info">
+                    <div class="join_row">
+                        <!-- 이름 label-->
+                        <h3 class="join_title">
+                            <label for="id">이름</label>
+                        </h3>
+                        <!-- 이름 input상자 -->
+                        <div class="ps_box">
+                            <input type="text" class="int" id="name" name="name">
+                        </div>
+                    </div>
+                    <div class="join_birth">
+                        <!-- 생년월일 label-->
+                        <h3 class="join_title">
+                            <label for="id">생년월일</label>
+                        </h3>
+                        <!-- 생년월일 input상자 -->
+                        <div class="bir_wrap">
+                            <div class="bir_yy">
+                                <div class="ps_box">
+                                    <input type="text" id="yy" placeholder="년(4자)" class="int" maxlength="4">
+                                </div>
+                            </div>
+                            <div class="bir_mm">
+                                <div class="ps_box">
+                                    <select id="mm" class="sel" label="월">
+                                        <option value="">월</option>   
+                                        <option value="1">1월</option>
+                                        <option value="2">2월</option>
+                                        <option value="3">3월</option>
+                                        <option value="4">4월</option>
+                                        <option value="5">5월</option>
+                                        <option value="6">6월</option>
+                                        <option value="7">7월</option>
+                                        <option value="8">8월</option>
+                                        <option value="9">9월</option>
+                                        <option value="10">10월</option>
+                                        <option value="11">11월</option>
+                                        <option value="12">12월</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="bir_dd">
+                                <div class="ps_box">
+                                    <input type="text" id="dd" placeholder="일" class="int" maxlength="4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="join_row">
+                        <!-- 이름 label-->
+                        <h3 class="join_title">
+                            <label for="id">성별</label>
+                        </h3>
+                        <!-- 이름 input상자 -->
+                        <div class="ps_box1">
+                            <select id="gender" class="sel" label="성별">
+                                <option value="">성별</option>
+                                <option value="">여자</option>   
+                                <option value="1">남자</option>
+                                <option value="2">선택안함</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!-- 아래 2줄 -->
+        <footer>
+            
+        </footer>
+    </div>
+    
+    
+</body>
+</html>
