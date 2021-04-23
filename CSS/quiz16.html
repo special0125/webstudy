@@ -100,9 +100,14 @@
             height: 24px;
             margin-top: -12px;
             color: #8e8e8e;
+            cursor: pointer;
         }
-        .user-info {
+       
+        .user-info , .user_phone {
             margin-top: 50px;
+        }
+         .name_box {
+            padding-right: 14px;
         }
         .join_birth .ps_box {
             padding: 11px 14px;
@@ -122,6 +127,12 @@
         .bir_mm, .bir_dd{
             padding-left: 10px
         }
+        .choice {
+            font-size: 12px;
+            color: #8e8e8e;
+        }
+       
+      
         
     </style>
 </head>
@@ -160,32 +171,32 @@
                 </div>
                  <!-- 비밀번호재확인 label, input -->
                 <div class="join_row">
-                    <!-- 비밀번호 label -->
+                    <!-- 비밀번호재확인 label -->
                     <h3 class="join_title">
-                        <label for="pwd">비밀번호 재확인</label>
+                        <label for="repwd">비밀번호 재확인</label>
                     </h3>
-                    <!-- 비밀번호 input상자 -->
+                    <!-- 비밀번호재확인 input상자 -->
                     <div class=ps_box>
-                        <input type="password" class="int" id="pwd" name="pwd">
+                        <input type="password" class="int" id="repwd" name="repwd">
                         <span class="step_text2"><i class="far fa-check-square fa-2x"></i></span>
                     </div>
                 </div>
-                <!-- 이름 label, input -->
+                <!-- 이름,생년월일,성별,이메일 label, input -->
                 <div class="user-info">
                     <div class="join_row">
                         <!-- 이름 label-->
                         <h3 class="join_title">
-                            <label for="id">이름</label>
+                            <label for="name">이름</label>
                         </h3>
                         <!-- 이름 input상자 -->
-                        <div class="ps_box">
+                        <div class="ps_box name_box" >
                             <input type="text" class="int" id="name" name="name">
                         </div>
                     </div>
                     <div class="join_birth">
                         <!-- 생년월일 label-->
                         <h3 class="join_title">
-                            <label for="id">생년월일</label>
+                            <label for="yy">생년월일</label>
                         </h3>
                         <!-- 생년월일 input상자 -->
                         <div class="bir_wrap">
@@ -223,7 +234,7 @@
                     <div class="join_row">
                         <!-- 이름 label-->
                         <h3 class="join_title">
-                            <label for="id">성별</label>
+                            <label for="gender">성별</label>
                         </h3>
                         <!-- 이름 input상자 -->
                         <div class="ps_box1">
@@ -234,6 +245,24 @@
                                 <option value="2">선택안함</option>
                             </select>
                         </div>
+                    </div>
+                    <div class="join_row">
+                        <!-- 이메일 label-->
+                        <h3 class="join_title">
+                            <label for="email">본인 확인 이메일</label><span class="choice">(선택)</span>
+                        </h3>
+                        <!-- 이름 input상자 -->
+                        <div class="ps_box name_box" >
+                            <input type="text" class="int" id="email" name="email" placeholder="선택입력">
+                        </div>
+                    </div>
+                </div>
+                <div class="user_phone">
+                    <div class="join_row">
+                        <!-- 휴대전화 label-->
+                        <h3 class="join_title">
+                            <label for="mobile">휴대전화</label>
+                        </h3>
                     </div>
                 </div>
             </form>

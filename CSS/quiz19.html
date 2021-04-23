@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">"
+    <title>quiz19</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            border: 1px solid black;
+            width: 530px;
+            height: 320px;
+            margin: 0 auto;
+            margin-top: 100px;
+            box-sizing: border-box;
+            background-color: beige;
+        }
+        .text {
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 28px;
+            background-color: lightgray;
+            box-shadow: 0 5px 10px gray
+        }
+        .login-sns {
+            display: flex;
+        }
+        .login , .sns {
+            width: 50%;
+            height: 250px;
+            display: inline-block;
+        }
+        .int {
+            margin: 20px 10px 0 10px;
+            width: 90%%;
+            height: 50px;
+            line-height: 50px;
+            border: none;
+            border: 1px solid darkgray;
+            background-color: darkgray;
+            border-radius: 5px;
+            position: relative;
+            
+        }
+        .int > input {
+            margin-left: 50px;
+            background-color: darkgray;
+            position: absolute;
+            border: none;
+            top: 15px;
+        }
+        .img {
+            position: absolute;
+            left: 15px;
+            color: white;
+        }
+        .sub_text {
+            margin-right: 10px;
+            text-align: right;
+            color: darkgray;
+        }
+        button {
+            margin-top: 20px;
+            margin-right: 10px;
+            float: right;
+            width: 60%;
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid crimson;
+            background-color: crimson;
+            color: white
+        }
+        .twit {
+            background-color: skyblue;
+            border: 1px solid skyblue;
+        }
+        .face {
+            background-color: navy;
+            border: 1px solid navy;
+            margin-top: 10px;
+        }
+        .goo {
+            background-color: red;
+            border: 1px solid red;
+            margin-top: 10px;
+        }
+        .sns_text{
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="text">WELCOME</div>
+       <div class="login-sns">
+           <div class="login">
+               <div class="int">
+                   <div class="img"><i class="far fa-smile fa-"></i></div>
+                   <input type="text" id="email" placeholder="User or Email">
+               </div>
+               <div class="sub_text">Forgot your username?</div>
+               <div class="int">
+                   <div class="img"><i class="fas fa-unlock"></i></div>
+                   <input type="text" id="email" placeholder="Password">
+               </div>
+               <div class="sub_text">Forgot your password?</div>
+               <button>LOGIN NOW</button>
+           </div>
+           <div class="sns">
+               <div class="int twit">
+                   <a href="https://twitter.com/" class="sns_text"><i class="fab fa-twitter"></i> Log in with Twitter</a>
+               </div>
+               <div class="int face">
+                   <a href="https://facebook.com/" class="sns_text"><i class="fab fa-facebook-f"></i> Log in with Facebook</a>
+               </div>
+               <div class="int goo">
+                   <a href="https://google.com/" class="sns_text"><i class="fab fa-google-plus-g"></i> Log in with Google+</a>
+               </div>
+           </div>
+       </div>
+        
+    </div>
+</body>
+</html>

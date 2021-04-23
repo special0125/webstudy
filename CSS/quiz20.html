@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>quiz20</title>
+    <style>
+        html , body {
+            padding: 0;
+            margin: 0;
+        }
+        table {
+            margin: 20px auto 0;
+            width: 500px;
+            text-align: center;
+        }
+        caption {
+            width: 100%;
+            text-align: center;
+            color: limegreen;
+        }
+        tr {
+            height: 40px;
+            
+        }
+        .info {
+            text-align: center;
+            height: 30px;
+        }
+        .info > td {
+            background-color: lightgray;
+            font-weight: 900;
+            border-top: 1px solid darkgray;
+            border-bottom: 1px solid darkgray;
+        }
+        tbody > tr {
+            text-align: left;
+        }
+        th {
+            padding-left: 10px;
+            width: 120px;
+        }
+        .int {
+            width: 220px;
+        }
+        .mobile {
+            width: 80px;
+        }
+        .email {
+            width: 150px;
+        }
+        
+    </style>
+</head>
+<body>
+    <table>
+        <caption><h1>회원가입 폼</h1></caption>
+        <thead>
+            <tr class="info">
+               <td colspan="2">필수정보</td>  
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>아이디</th>
+                <td ><input type="text" class="int"></td>
+            </tr>
+            <tr>
+                <th>비밀번호</th>
+                <td ><input type="text" class="int"></td>
+            </tr>
+            <tr>
+                <th>비밀번호확인</th>
+                <td ><input type="text" class="int"></td>
+            </tr>
+            <tr>
+                <th>이름</th>
+                <td ><input type="text" class="int"></td>
+            </tr>
+            <tr>
+                <th>성별</th>
+                <td>
+                    <input type="radio" name="gender" value="no" id="no" checked>
+                    <label for="no">선택안함</label> <input type="radio" name="gender" value="male" id="man">
+                    <label for="man">남자</label> <input type="radio" name="gender" value="female" id="feman">
+                    <label for="feman">여자</label>
+                </td>
+            </tr>
+            <tr>
+                <th>연락처</th>
+                <td>
+                    <select id="number" class="mobile">
+                    <option value="010">010</option>
+                    <option value="02">02</option>
+                    <option value="032">032</option>
+                    <option value="031">031</option>    
+                    </select>&nbsp;&nbsp;
+                    <input type="text" class="mobile">
+                    -
+                    <input type="text" class="mobile">
+                </td>
+            </tr>
+            <tr class="info">
+               <td colspan="2">선택정보</td>  
+            </tr>
+            <tr>
+                <th>닉네임</th>
+                <td ><input type="text" class="int"></td>
+            </tr>
+            <tr>
+                <th>이메일</th>
+                <td >
+                    <input type="text" class="email"> 
+                    @ 
+                    <input type="text" list="domains" class="email" placeholder="도메인입력/선택">
+                    <datalist id="domains">
+                        <option value="naver.com">
+                        <option value="daum.net">
+                        <option value="gmail.com">
+                        <option value="nate.com">
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <th>이메일수신</th>
+                <td>
+                    <input type="radio" name="mail" id="get" checked>
+                    <label for="get">수신</label> <input type="radio" name="mail" id="no_get">
+                    <label for="no_get">미수신</label> 
+                </td>
+            </tr>
+             <tr>
+                <th>취미활동</th>
+                <td >
+                    <input type="checkbox" name="hobby" id="book" >&nbsp;<label for="book">독서</label>&nbsp;&nbsp;  
+                    <input type="checkbox" name="hobby" id="book" >&nbsp;<label for="book">낚시</label>&nbsp;&nbsp;
+                    <input type="checkbox" name="hobby" id="book" >&nbsp;<label for="book">수영</label>
+                </td>
+            </tr>
+            <tr>
+                <th>취미활동</th>
+                <td><input type="submit" placeholder="파일 선택"></td>
+            </tr>
+        </tbody> 
+        
+    </table>
+</body>
+</html>
