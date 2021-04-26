@@ -48,6 +48,9 @@
         .email {
             width: 150px;
         }
+        span {
+            font-size: 12px;
+        }
         
     </style>
 </head>
@@ -137,10 +140,17 @@
                 </td>
             </tr>
             <tr>
-                <th>취미활동</th>
-                <td><input type="submit" placeholder="파일 선택"></td>
+                <th>프로필사진</th>
+                <td><input type="submit" value="파일 선택"> <span>선택된 파일 없음</span></td>
             </tr>
-        </tbody> 
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="회원가입">&nbsp;
+                    <input type="submit" value="다시작성"></td>
+            </tr>
+        </tfoot>
         
     </table>
 </body>

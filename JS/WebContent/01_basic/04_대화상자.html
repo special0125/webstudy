@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+		// 1. 경고창
+		// alert('경고메시지');
+		
+		// 2. 확인창
+		// a = confirm('확인메시지');  // '확인'버튼을 클릭하면 true 반환, '취소'버튼을 클릭하면 false 반환
+		// console.log(a);
+		
+		// 3. 입력창
+		// b = prompt('입력메시지');  // 입력된 내용을 반환
+		// console.log(typeof b);	   // 입력된 내용의 타입은 무조건 String
+		// console.log(b);
+		
+		// 이름을 입력 받아서 "내 이름은 xxx입니다."
+		// 나이를 입력 받아서 "성인(미성년자)이고, 내년 나이는 xx살입니다."
+		var name = prompt('이름 입력');
+		alert('내 이름은 ' + name + '입니다.');  // 입력값은 String 타입
+		var age = prompt('나이 입력');
+		var gubun = age >= 20 ? '성인' : '미성년자';  // '20' >= 20 기본적인 산술 연산은 가능 
+		// var nextAge = age + 1;  // '20' + 1 => '201' 문자열의 +연산은 무조건 연결이다.
+		var nextAge = parseInt(age) + 1;  // Number(age) + 1
+		alert(gubun + '이고, 내년 나이는 ' + nextAge + '살입니다');
+	</script>
+</head>
+<body>
+
+</body>
+</html>
