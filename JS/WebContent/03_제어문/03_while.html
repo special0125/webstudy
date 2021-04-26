@@ -59,12 +59,49 @@
 		document.getElementById('select-box').appendChild(select);
 	</script>
 	<div id="table-box"></div>
+	
 	<script>
 	var table = document.createElement('table');
-	//var caption = document.createElement('caption');
-	//caption.textContent = 다이얼
+	var caption = document.createElement('caption');
+	caption.textContent = '다이얼';
+	table.appendChild(caption);
+	var n = 0;
+	while(n < 4){
+		var tr = document.createElement('tr');
+		var m = 1;
+		while(m <= 3){
+			var td = document.createElement('td');
+				td.textContent = (3 * n) + m;
+			var a = (3 * n + m);
+				if(a == 10){
+					td.textContent = '*';
+				}else if(a == 11){
+					td.textContent = '0';
+				}else if(a == 12){
+					td.textContent = '#';
+				}
+				tr.appendChild(td);
+				td.style.border = '1px solid black';
+			m++;
+		}
+		n++;
+		table.appendChild(tr);
+	}
+	
+	document.getElementById('table-box').appendChild(table);
+	
+	
 	table.style.border = '1px solid black';
-	//table.appendChild(caption);
+	table.style.width = '300px';
+	table.style.height = '400px';
+	table.style.textAlign = 'center';
+	caption.style.color = 'red';
+	caption.style.fontWeight = '900';
+	
+	
+	
+	table.style.borderCollapse = 'collapse';
+	
 	
 	</script>	
 	
