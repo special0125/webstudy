@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>personal_info</title>
+    <style>
+        .container {
+            width: 700px;
+            height: 600px;
+            margin: 0 auto;
+            background-color: #e4f3ff;
+        }
+        table {
+            margin: 0 auto;
+            width: 500px;
+            border-collapse: collapse;
+        }
+        caption {
+            text-align: center;
+            margin: 10px 0 20px;
+            font-size: 26px;
+            font-weight: 900;
+        }
+        tr {
+            height: 40px;
+        }
+        td {
+            border: 1px solid black;
+            padding-left: 10px;
+        }
+        .number {
+            width: 100px;
+            height: 25px;
+        }
+        .birthday {
+            width: 60px;
+            height: 25px;
+        }
+        .text-box {
+            width: 320px;
+            height: 180px;
+            margin: 10px 0;
+        }
+        th {
+            padding-top: 30px;
+             text-align: center;
+        }
+        .modify {
+           border: 1px solid navy;
+            width: 100px;
+            height: 50px;
+            background-color: navy;
+            color: white;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <thead>
+                <caption>개인정보입력 폼</caption>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2" class="top">개인정보</td>
+                </tr>
+                <tr>
+                    <td>주민등록번호</td>
+                    <td>
+                    <input type="text" class="number"> - <input type="text" class="number">
+                    <button>검증</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>생일</td>
+                    <td>
+                        <input type="text" class="birthday">년
+                        <input type="text" class="birthday">월
+                        <input type="text" class="birthday">일
+                    </td>
+                </tr>
+                <tr>
+                    <td>성별</td>
+                    <td>
+                        <input type="radio" name="gender" value="male" id="man">
+                        <label for="man">남자</label> 
+                        <input type="radio" name="gender" value="female" id="feman">
+                        <label for="feman">여자</label>
+                        </td>
+                </tr>
+                <tr>
+                    <td>관심분야</td>
+                    <td>
+                        <input type="checkbox">여행
+                        <input type="checkbox">영화
+                        <input type="checkbox">독서
+                        <input type="checkbox">음악
+                        <input type="checkbox">관심없음
+                    </td>
+                </tr>
+                <tr>
+                    <td>자기소개</td>
+                    <td>
+                        <input type="text" class="text-box">
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="2">
+                        <button class="modify"><a href="borad.html">수정완료</a></button>
+                    </th>
+                </tr>
+            </tfoot>
+        </table>
+        
+    </div>
+</body>
+</html>

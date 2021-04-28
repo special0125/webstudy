@@ -3,30 +3,72 @@
 <head>
     <meta charset="utf-8">
     <title>practice</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: beige;
+        }
+        .container {
+            width: 700px;
+            height: 1000px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            background-color: white;
+            
+        }
+        .img {
+            width: 150px;
+            height: 70px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            background-image: url("https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png");
+            background-size: cover;
+        }
+        section {
+            border: 1px solid black;
+            width: 100%;
+            height: 400px;
+        }
+        article {
+            border: 1px solid black;
+            margin: 30px auto;
+            width: 650px;
+            height: 300px;
+            display: flex;
+        }
+        .login, .banner {
+            border: 1px solid black;
+            width: 50%;
+            height: 300px;
+            display: inline-block;
+        }
+        .int {
+            border: 1px solid black;
+            width: 250px;
+            height: 50px;
+            margin: 20px 15px 20px ;
+        }
+    </style>
 </head>
 <body>
-    <table>
-        <caption>다이얼</caption>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-        </tr>
-        <tr>
-            <td>*</td>
-            <td>0</td>
-            <td>#</td>
-        </tr>
-    </table>
+    <div class="container">
+       <header>
+           <div class="img"></div>
+       </header>
+       <section>
+           <article>
+               <div class="login">
+                   <div class="int">
+                       <input type="text" placeholder="아이디 입력">
+                   </div>
+    
+               </div>
+               <div class="banner">
+                   
+               </div>
+           </article>
+       </section>
+    </div>    
 </body>
 </html>

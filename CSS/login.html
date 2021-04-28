@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>login</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .container {
+            width: 500px;
+            height: 600px;
+            margin: 0 auto;
+            background-color: #e4f3ff;
+        }
+        header {
+            width: 100%;
+            height: 250px;
+            line-height: 250px;
+            text-align: center;
+        }
+        section {
+            widows: 100%;
+            height: 250px;
+            text-align: center;
+            
+        }
+         img {
+            margin-top: 100px;
+        }
+        .id-pwd , .login {
+            margin: 0 auto;
+            display: block;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .id-pwd {
+             width: 400px;
+            height: 50px;
+            margin-bottom: 10px;
+            padding-left: 20px;   
+        }
+        .login {
+            width: 426px;
+            height: 45px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            background-color: navy;
+            color: white;   
+        }
+        a {
+            text-decoration-line: none;
+        }
+        .check {
+            padding-left: 40px;
+            text-align: left;
+        }
+        p {
+            text-align: center;
+            color: darkgray;
+        }
+       
+        
+
+        
+         
+    </style>
+</head>
+<body>
+  <div class="container">
+      <header>
+          <div class="img"><img src="images/korea.png"></div>
+      </header>
+      <section>
+          <article>
+              <div class="info">
+                  <input class="id-pwd" type="text" placeholder="계정">
+                  <input class="id-pwd" type="password" placeholder="비밀번호"> 
+                  <button class="login"><a href="borad.html">로그인</a></button>
+              </div>
+          </article>
+          <article class="check">
+               <input type="checkbox" class="check" id="auto-login" >
+               <label for="auto-login">자동 로그인</label>  
+               <input type="checkbox" class="check" id="pwdsave" >
+               <label for="pwdsave">비밀번호 저장</label> 
+          </article>
+      </section>
+      <footer>
+          <p><i class="fas fa-cog"></i> 환경설정</p>
+      </footer>
+  </div>
+</body>
+</html>

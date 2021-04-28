@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>board</title>
+    
+    <style>
+        .container {
+            width: 700px;
+            height: 600px;
+            margin: 0 auto;
+            background-color: #e4f3ff;
+        }
+        table {
+            margin: 0 auto;
+            width: 600px;
+            border-top: 3px double black;
+            
+            border-collapse: collapse;
+        }
+        caption {
+            text-align: center;
+            margin: 10px 0 20px;
+            font-size: 26px;
+            font-weight: 900;
+        }
+        tr {
+            height: 40px;
+        }
+        td {
+            border-bottom: 1px solid black;
+        }
+        .top {
+            background-color: lightgray
+        }
+        .content:hover {
+            background-color: beige;
+        }
+        th {
+            padding-top: 30px;
+             text-align: center;
+        }
+        button {
+            border: 1px solid navy;
+            width: 100px;
+            height: 50px;
+            background-color: navy;
+            color: white;
+            border-radius: 5px;
+        }
+        a {
+            text-decoration-line: none;
+        }
+    </style>
+</head>
+<body>
+       <div class="container">
+        <table>
+            <thead>
+                <caption>자유게시판</caption>
+            </thead>
+            <tbody>
+                <tr class="top">
+                    <td>순번</td>
+                    <td>제목</td>
+                    <td>작성자</td>
+                    <td>작성일</td>
+                    <td>조회수</td>
+                </tr>
+                <tr class="content">
+                    <td>5</td>
+                    <td>이용후기</td>
+                    <td>존윅</td>
+                    <td>2021-04-22</td>
+                    <td>20</td>
+                </tr>
+                <tr class="content">
+                    <td>4</td>
+                    <td>게시판이용문의</td>
+                    <td>제임스</td>
+                    <td>2021-04-22</td>
+                    <td>15</td>
+                </tr>
+                <tr class="content">
+                    <td>3</td>
+                    <td>가입인사</td>
+                    <td>새내기</td>
+                    <td>2021-04-21</td>
+                    <td>7</td>
+                </tr>
+                <tr class="content">
+                    <td>2</td>
+                    <td>[필독]게시판이용안내</td>
+                    <td>매니저</td>
+                    <td>2021-04-21</td>
+                    <td>94</td>
+                </tr>
+                <tr class="content">
+                    <td>1</td>
+                    <td>[긴급]공지사항</td>
+                    <td>관리자</td>
+                    <td>2021-04-20</td>
+                    <td>85</td>
+                </tr>
+            </tbody>
+            <tfoot class="button">
+                <tr class="foot">
+                    <th colspan="5">
+                        <button><a href="login.html">로그아웃</a></button>
+                        &nbsp;&nbsp;
+                        <button><a href=personal_info.html>개인정보수정</a></button>
+                    </th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>
