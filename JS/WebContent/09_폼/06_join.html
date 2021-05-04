@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>quiz16</title>
+	<title>네이버 : 회원가입</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 	<link rel="stylesheet" href="../styles/join.css">
 </head>
@@ -27,9 +27,9 @@
                         <input type="text" id="id" class="int" name="id">
                         <span class="step_url">@naver.com</span>
                     </div>
-                </div>
-                <!-- 아이디체크결과 -->
+                    <!-- 아이디체크결과 -->
                     <p id="id_check"></p>
+                </div>
                 <!-- 비밀번호label,input -->
                 <div class="join_row">
                     <!-- 비밀번호label -->
@@ -41,9 +41,9 @@
                         <input type="password" id="pwd" class="int" name="pwd">
                         <span class="step_url"><i class="fas fa-unlock"></i></span>
                     </div>
-                </div>
-                <!-- 비밀번호체크결과 -->
+                    <!-- 비밀번호체크결과 -->
                     <p id="pwd_check"></p>
+                </div>
                 <!-- 비밀번호재확인label,input -->
                 <div class="join_row">
                     <!-- 비밀번호재확인label -->
@@ -55,8 +55,8 @@
                         <input type="password" id="re_pwd" class="int" name="re_pwd">
                         <span class="step_url"><i class="far fa-check-circle"></i></span>
                     </div>
-                 <!-- 비밀번호재입력체크결과 -->
-                    <p id="repwd_check"></p>
+                    <!-- 비밀번호재확인체크결과 -->
+                    <p id="re_pwd_check"></p>
                 </div>
                 <br>
                 <!-- 이름label,input -->
@@ -174,84 +174,100 @@
             </div>
         </footer>
     </div>
-	<script>
-	    	var id = document.getElementById('id');
-	    	id.addEventListener('blur', function(){
-	    		var idCheck = document.getElementById('id_check');
-	    		if(id.value == '') {
-	    			idCheck.textContent = '필수 정보입니다.';
-	    			idCheck.setAttribute('class', 'check_fail');
-	    		}else {
-		    		var regID = /^[a-z0-9][a-z0-9_-]{4,19}$/;
-		    		if(regID.test(id.value)) {
-		    			idCheck.textContent = '멋진 아이디네요!';
-		    			idCheck.setAttribute('class', 'check_pass');
-		    		}else {
-		    			idCheck.textContent = '5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.';
-		    			idCheck.setAttribute('class', 'check_fail');
-		    		}
-	    		}
-	    	});
-	    	
-	    /* 	var pwd = document.getElementById('pwd');
-	    	pwd.addEventListener('blur', function(){
-	    		var pwdCheck = document.getElementById('pwd_check');
-	    		if (pwd.value == ''){
-	    			pwdCheck.textContent = '필수 정보입니다.';
-	    			pwdCheck.setAttribute('class', 'check_fail');
-	    		}else {
-	    			var icon = document.querySelectior('#pwd + span'); 
-	    			var regPWD = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-z])(?=.*[`!@#$%^&*])[A-Za-Z0-9`~!@#$%^&*]{8,16}$/;
-	    			if (regPWD.test(pwd.value)) {
-	    				icon.setAttribute('class', 'step_url check_pass');
-	    				pwdCheck.textContent = '';
-	    			}else {
-	    				icon.setAttribute('class', 'step_url check_fail');
-	    				pwdCheck.textContent = '8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.'
-
-	    			}
-	    		}
-	    	}); */
-	    	
-	   /*  	var rePwd = document.getElementById('re_pwd');
-	    	var reIcon = document.querySelector('#re_pwd + span');
-	    	var rePwdCheck = document.getElementById('repwd_check')
-	    	rePwd.addEventListener('blur', function(){
-	    		if(repwd.value == ''){
-	    			reIcon.setAttribute('class', 'step_url');
-	    			rePwdCheck.textContent = '필수 정보입니다.';
-	    			rePwdCheck.setAttribute('class', 'check_fail');
-	    		}else if (rePwd.value == pwd.value) {
-	    			rePwdCheck.textContent = '';
-	    			reIcon.setAttribute('class', 'step_url check_pass');
-	    		}else {
-	    			rePwdCheck.textContent = '비밀번호가 일치하지 않습니다.'
-	    			reIcon.setAttribute('class', 'step_url');
-	    		}
-	    	}) */
-	    	
-	    	var name = document.getElementById('name');
-	    	name.addEventListener('blur', function(){
-	    		var nameCheck = document.getElementById('name_check');
-	    		if(name.value == '') {
-	    			nameCheck.textContent = '필수 정보입니다.';
-	    			nameCheck.setAttribute('class', 'check_fail');
-	    		}else {
-		    		var regName = /^[가-힣a-zA-Z]+$/;
-		    		if(regName.test(name.value)) {
-		    			nameCheck.textContent = '';
-		    			nameCheck.setAttribute('class', 'check_pass');
-		    		}else {
-		    			nameCheck.textContent = '한글과 영문 대 소문자를 사용하세요. (특수기호, 공백 사용 불가)';
-		    			nameCheck.setAttribute('class', 'check_fail');
-		    		}
-	    		}
-	    	});
-	    	
-	    	
-	    	
-	    	
-	    </script>
+    
+    <script>
+    
+    	let id = document.getElementById('id');
+   		let idCheck = document.getElementById('id_check');
+    	id.addEventListener('blur', function(){
+    		if (id.value == '') {
+    			idCheck.textContent = '필수 정보입니다.';
+    			idCheck.setAttribute('class', 'check_fail');
+    		} else {
+	    		let regID = /^[a-z0-9][a-z0-9_-]{4,19}$/;
+				if (regID.test(id.value)) {
+					idCheck.textContent = '멋진 아이디네요!';
+					idCheck.setAttribute('class', 'check_pass');
+				} else {
+					idCheck.textContent = '5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.';
+					idCheck.setAttribute('class', 'check_fail');
+				}
+    		}
+    	});
+    	
+    	let pwd = document.getElementById('pwd');
+    	let icon = document.querySelector('#pwd + span');
+    	let pwdCheck = document.getElementById('pwd_check');
+    	pwd.addEventListener('blur', function(){
+    		if (pwd.value == '') {
+    			icon.setAttribute('class', 'step_url check_fail');
+    			pwdCheck.textContent = '필수 정보입니다.';
+    			pwdCheck.setAttribute('class', 'check_fail');
+    		} else {
+    			let regPWD = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[`~!@#$%^&*])[A-Za-z0-9`~!@#$%^&*]{4,16}$/;
+    			if (regPWD.test(pwd.value)) {
+    				icon.setAttribute('class', 'step_url check_pass');
+    				pwdCheck.textContent = '';
+    			} else {
+    				icon.setAttribute('class', 'step_url check_fail');
+    				pwdCheck.textContent = '8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.';
+    				pwdCheck.setAttribute('class', 'check_fail');
+    			}
+    		}
+    	});
+    	
+    	let rePwd = document.getElementById('re_pwd');
+    	let reIcon = document.querySelector('#re_pwd + span');
+    	let rePwdCheck = document.getElementById('re_pwd_check');
+    	rePwd.addEventListener('blur', function(){
+    		if (rePwd.value == '') {
+    			reIcon.setAttribute('class', 'step_url');
+    			rePwdCheck.textContent = '필수 정보입니다.';
+    			rePwdCheck.setAttribute('class', 'check_fail');
+    		} else if (rePwd.value == pwd.value) {
+    			reIcon.setAttribute('class', 'step_url check_pass');
+    			rePwdCheck.textContent = '';
+    		} else {
+    			reIcon.setAttribute('class', 'step_url');
+    			rePwdCheck.textContent = '비밀번호가 일치하지 않습니다.';
+    			rePwdCheck.setAttribute('class', 'check_fail');
+    		}
+    	});
+    	
+    	let name = document.getElementById('name');
+    	let nameCheck = document.getElementById('name_check');
+    	name.addEventListener('blur', function(){
+    		if (name.value == '') {
+    			nameCheck.textContent = '필수 정보입니다.';
+    			nameCheck.setAttribute('class', 'check_fail');
+    		} else {
+    			let regName = /^[가-힣a-zA-Z]+$/;
+    			if (regName.test(name.value)) {
+    				nameCheck.textContent = '';
+    			} else {
+    				nameCheck.textContent = '한글과 영문 대 소문자를 사용하세요. (특수기호, 공백 사용 불가)';
+    				nameCheck.setAttribute('class', 'check_fail');
+    			}
+    		}
+    	});
+    	
+    	
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </body>
 </html>
 
