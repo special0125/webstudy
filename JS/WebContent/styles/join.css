@@ -110,9 +110,7 @@ label {
     right: 0;
     width: 115px;
     height: 51px;
-    line-height: 51px;
     padding: 18px 0 16px;
-    color: #ffffff;
     text-align: center;
     text-decoration: none;
     font-size: 15px;
@@ -154,7 +152,7 @@ footer > .company-info > .small-naver-logo {
     margin-bottom: 10px;
     width: 50px;
     height: 12px;
-    background-image: url(images/naver.png);
+    background-image: url(../images/naver.png);
     background-size: cover;
     background-position: center;
 }
