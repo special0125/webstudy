@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		var request = new XMLHttpRequest();
+		request.open('get', 'quiz04.xml', true);
+		request.send();
+		request.onreadystatechange = function(){
+			if (request.readyState == 4 && request.status == 200) {
+				var resXML = request.responseXML;
+				var locations = resXML.getElementsByTagName('location');
+				for (let i = 0; i < locations.length; i++) {
+					var location = locations[i];
+					var tr = document.createElement('tr');
+					document.getElementById('receive').appendChild(tr);
+					
+					var td = document.createElement('td');
+					td.textContent = location.getElementsByTagName('city')[0].textContent;
+					td.setAttribute('colspan', '5');
+					tr.appendChild(td);
+					
+					var datas = location.getElementsByTagName('data');
+					for (let j = 0; j < datas.length; j++){
+						var data = datas[j];
+						
+						var tr = document.createElement('tr');
+						document.getElementById('receive').appendChild(tr);
+						
+						var td = document.createElement('td');
+						td.textContent = data.getElementsByTagName('tmEf')[0].textContent;
+						tr.appendChild(td);
+						var td = document.createElement('td');
+						td.textContent = data.getElementsByTagName('wf')[0].textContent;
+						tr.appendChild(td);
+						var td = document.createElement('td');
+						td.textContent = data.getElementsByTagName('tmn')[0].textContent + '℃';
+						tr.appendChild(td);
+						var td = document.createElement('td');
+						td.textContent = data.getElementsByTagName('tmx')[0].textContent + '℃';
+						tr.appendChild(td);
+						var td = document.createElement('td');
+						td.textContent = data.getElementsByTagName('rnSt')[0].textContent + '%';
+						tr.appendChild(td);
+						
+						
+					}
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<table border="1">
+		<tbody id="receive"></tbody>
+	</table>
+</body>
+</html>

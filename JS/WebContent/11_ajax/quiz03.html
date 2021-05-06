@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		onload = function(){
+			var request = new XMLHttpRequest();
+			request.open('get', 'quiz03.xml', true);
+			request.send();
+			request.onreadystatechange = function(){
+				if(request.readyState == 4 && request.status == 200) {
+					var resXML = request.responseXML;
+					var weather = resXML.getElementsByTagName('weather')[0];
+					/*
+					document.getElementById('year').textContent = weather.getAttribute('year');
+					document.getElementById('month').textContent = weather.getAttribute('month');
+					document.getElementById('day').textContent = weather.getAttribute('day');
+					document.getElementById('hour').textContent = weather.getAttribute('hour');
+					*/
+					var attrs = ['year', 'month', 'day', 'hour'];
+					for (let i = 0; i < attrs.length; i++) {
+						document.getElementById(attrs[i]).textContent = weather.getAttribute(attrs[i]);
+					}
+					
+					var locals = resXML.getElementsByTagName('local');
+					
+					
+					for(let i = 0; i < locals.length; i++){
+						var local = locals[i];
+						
+						var tr = document.createElement('tr');
+						document.getElementById('receive').appendChild(tr);
+						
+						var td = document.createElement('td');
+						td.textContent = i + 1;
+						tr.appendChild(td);
+						
+						var td = document.createElement('td');
+						td.textContent = local.textContent;
+						tr.appendChild(td);
+						
+						var td = document.createElement('td');
+						td.textContent = local.getAttribute('ta')
+						tr.appendChild(td);
+						
+						var td = document.createElement('td');
+						td.textContent = local.getAttribute('desc');
+						tr.appendChild(td);
+					} 
+					
+				}
+				
+				
+				
+				
+			}
+		}
+		
+	</script>
+	
+</head>
+<body>
+	<h1>
+		<span id="year"></span>년&nbsp;
+		<span id="month"></span>월&nbsp;
+		<span id="day"></span>일&nbsp;
+		<span id="hour"></span>시&nbsp;
+	</h1>
+	<table border="1">
+		<thead>
+			<tr>
+				<td>순번</td>
+				<td>지역</td>
+				<td>온도</td>
+				<td>날씨</td>
+			</tr>
+		</thead>
+		<tbody id="receive"></tbody>
+	</table>
+</body>
+</html>

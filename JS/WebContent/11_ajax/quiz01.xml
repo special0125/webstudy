@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<people>
+	<person>
+		<name>제시카</name>
+		<age>30</age>
+		<address>서울시 마포구</address>
+		<tel>010-1111-1111</tel>
+	</person>
+	<person>
+		<name>아만다</name>
+		<age>35</age>
+		<address>인천시 부평구</address>
+		<tel>010-2222-2222</tel>
+	</person>
+	<person>
+		<name>데이빗</name>
+		<age>40</age>
+		<address>경기도 과천시</address>
+		<tel>010-3333-3333</tel>
+	</person>
+</people>

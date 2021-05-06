@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		onload = function(){
+			document.getElementById('get_person').addEventListener('click', function(){
+				getPerson();
+			});
+			function getPerson(){
+				var request = new XMLHttpRequest();
+				request.open('get', 'quiz05.json', true);
+				request.send();
+				request.onreadystatechange = function(){
+					if (request.readyState == 4 && request.status == 200) {
+						var resText = JSON.parse(request.responseText);
+						for (let i = 0; i < resText.length; i++) {
+							var person = resText[i];
+							var tr = document.createElement('tr');
+							document.getElementById('receive').appendChild(tr);
+							for (let p in person) {
+								var td = document.createElement('td');
+								td.textContent = person[p];
+								tr.appendChild(td);
+							}
+						}
+					}
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<button id=get_person>정보 가져오기</button>
+	<br><br>
+	<table border="1">
+		<thead>
+			<tr>
+				<td>이름</td>
+				<td>나이</td>
+				<td>생일</td>
+			</tr>
+		</thead>
+		<tbody id="receive"></tbody>
+	</table>
+</body>
+</html>
