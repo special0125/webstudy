@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="../js/jquery-3.6.0.js"></script>
+	<script>
+		
+		// 페이지 로드 이벤트
+		$(document).ready(function(){
+			// 부모/자식/형제 확인하기
+			const css = $('#css');
+			const ul = $('ul');
+			
+			// 부모
+			console.log($(css).parent());
+			
+			// 자식
+			console.log($(ul).children());
+			
+			// 형제
+			console.log($(css).prev()); 	 // 이전 형제
+			console.log($(css).next()); 	 // 다음 형제
+			console.log($(css).siblings());  // 모든 형제
+			
+			// 실습
+			$(css).parent().css('list-style-type', 'none');
+			$(ul).children().css('color', 'red');
+			$(css).prev().css('background-color', 'yellow');
+			
+		})
+	
+	</script>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>HTML</li>
+			<li id="css">CSS</li>
+			<li>JavaScript</li>
+			<li>JQuery</li>
+		</ul>
+	</div>
+</body>
+</html>

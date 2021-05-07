@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script>
+		// 페이지 로드 이벤트
+		$(document).ready(function(){
+			var $answer = $('#answer');
+			
+			// 클래스 주기
+			$answer.addClass('blind');
+			
+			$('#btn').on('click', function(){
+				
+				// $answer.toggleClass('blind');
+				
+				// 학습을 위해
+				if ($answer.hasClass('blind')) {
+					$answer.removeClass('blind');
+				} else {
+					$answer.addClass('blind');
+				}
+			})
+		})
+	</script>
+	<style>
+		.blind {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<h3>여기는 어디??</h3>
+	<input type="button" id="btn" value="정답보기">
+	<div id="answer">신촌!</div>
+</body>
+</html>

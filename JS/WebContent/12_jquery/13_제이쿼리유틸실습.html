@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script>
+	
+		// 페이지 로드 이벤트
+		$(document).ready(function(){
+			
+			// 만든객체.appendTo('body')
+			
+			const people = [
+				{name: '아만다', age: 20, address: '서울'},
+				{name: '제시카', age: 21, address: '파리'},
+				{name: '나탸샤', age: 22, address: '홍콩'}
+			]
+			
+			// 테이블을 만들어서 body에 넣어보자.
+			$('<table>')
+			.attr('border', '1')
+			.append('<tbody id="content">')
+			.appendTo('body');
+			
+			$.each(people, function(i, person){
+				const $tr = $('<tr>');
+				const $td1 = $('<td>').text(person.name); 
+				$tr.append($td1);
+				const $td2 = $('<td>').text(person.age);
+				$tr.append($td2);
+				const $td3 = $('<td>').text(person.address);
+				$tr.append($td3);
+				$tr.appendTo('#content');
+				
+				
+			})
+			
+		})
+	</script>
+</head>
+<body>
+</body>
+</html>
